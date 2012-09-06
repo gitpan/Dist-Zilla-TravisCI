@@ -30,6 +30,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Role::Git::Remote::Branch" => "v0.1.1",
     "Dist::Zilla::Role::Git::Remote::Check" => "v0.1.1",
     "Dist::Zilla::Role::Git::Remote::Update" => "v0.1.1",
+    "Dist::Zilla::Role::Git::Repo" => "1.113220",
     "Dist::Zilla::Role::MetaCPANInterfacer" => "0.90",
     "File::Slurp" => "9999.14",
     "List::AllUtils" => "0.01",
@@ -39,7 +40,7 @@ my %WriteMakefileArgs = (
     "MooseX::Types::Moose" => 0,
     "sanity" => "0.91"
   },
-  "VERSION" => "0.91",
+  "VERSION" => "0.92",
   "test" => {
     "TESTS" => "t/*.t"
   }

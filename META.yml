@@ -28,6 +28,7 @@ prereqs:
       Dist::Zilla::Role::Git::Remote::Branch: v0.1.1
       Dist::Zilla::Role::Git::Remote::Check: v0.1.1
       Dist::Zilla::Role::Git::Remote::Update: v0.1.1
+      Dist::Zilla::Role::Git::Repo: 1.113220
       Dist::Zilla::Role::MetaCPANInterfacer: 0.90
       File::Slurp: 9999.14
       List::AllUtils: 0.01
@@ -44,16 +45,16 @@ prereqs:
 provides:
   Dist::Zilla::App::Command::chainsmoke:
     file: lib/Dist/Zilla/App/Command/chainsmoke.pm
-    version: 0.91
+    version: 0.92
   Dist::Zilla::App::CommandHelper::ChainSmoking:
     file: lib/Dist/Zilla/App/CommandHelper/ChainSmoking.pm
-    version: 0.91
+    version: 0.92
   Dist::Zilla::Plugin::TravisYML:
     file: lib/Dist/Zilla/Plugin/TravisYML.pm
-    version: 0.91
+    version: 0.92
   Dist::Zilla::Role::TravisYML:
     file: lib/Dist/Zilla/Role/TravisYML.pm
-    version: 0.91
+    version: 0.92
 release_status: stable
 resources:
   bugtracker:
@@ -64,7 +65,7 @@ resources:
     url: git://github.com/SineSwiper/Dist-Zilla-TravisCI.git
     web: https://github.com/SineSwiper/Dist-Zilla-TravisCI
   x_irc: irc://irc.perl.org/#distzilla
-version: 0.91
+version: 0.92
 x_Dist_Zilla:
   plugins:
     -
@@ -78,11 +79,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: Git::NextVersion
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::Git::GatherDir
       name: Git::GatherDir
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::OurPkgVersion
       name: OurPkgVersion
@@ -242,23 +243,23 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::CommitBuild
       name: Git::CommitBuild
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Git/Check'
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@Git/Commit'
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Git/Tag'
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Git/Push'
-      version: 1.121820
+      version: 1.122460
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: TestRelease
