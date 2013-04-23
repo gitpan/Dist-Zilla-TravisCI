@@ -1,6 +1,6 @@
 package Dist::Zilla::App::Command::chainsmoke;
 
-our $VERSION = '0.96'; # VERSION
+our $VERSION = '0.97'; # VERSION
 # ABSTRACT: continuously smoke your dist on your CI server
 
 use sanity;
@@ -51,8 +51,8 @@ sub execute {
 }
 
 42;
- 
 
+__END__
 
 =pod
 
@@ -137,7 +137,3 @@ This is free software, licensed under:
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-

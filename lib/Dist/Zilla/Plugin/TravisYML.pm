@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::TravisYML;
 
-our $VERSION = '0.96'; # VERSION
+our $VERSION = '0.97'; # VERSION
 # ABSTRACT: creates a .travis.yml file for Travis CI
 
 use sanity;
@@ -49,8 +49,8 @@ sub after_release {
 
 __PACKAGE__->meta->make_immutable;
 42;
- 
 
+__END__
 
 =pod
 
@@ -192,7 +192,3 @@ This is free software, licensed under:
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-

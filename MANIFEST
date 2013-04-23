@@ -18,7 +18,6 @@ t/00-check-deps.t
 t/00-compile.t
 t/00-load.t
 t/000-report-versions-tiny.t
-weaver.ini
 xt/author/test-eol.t
 xt/release/check-manifest.t
 xt/release/dist-manifest.t

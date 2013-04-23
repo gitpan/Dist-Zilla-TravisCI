@@ -1,8 +1,8 @@
 # PODNAME: Dist::Zilla::TravisCI::MVDT
 # ABSTRACT: FAQ for Minimum Version Dependency Testing (MVDT)
 
-
 __END__
+
 =pod
 
 =encoding utf-8
@@ -210,4 +210,3 @@ This is free software, licensed under:
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-

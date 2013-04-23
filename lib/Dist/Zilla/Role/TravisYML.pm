@@ -1,6 +1,6 @@
 package Dist::Zilla::Role::TravisYML;
 
-our $VERSION = '0.96'; # VERSION
+our $VERSION = '0.97'; # VERSION
 # ABSTRACT: Role for .travis.yml creation
 
 use sanity;
@@ -122,7 +122,7 @@ sub build_travis_yml {
    my $footer   = $self->_footer;
    my @releases = @{$self->_releases};
 
-   my $env_vars = '   - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=j10:c HARNESS_TIMER=1';
+   my $env_vars = '   - export AUTOMATED_TESTING=1 HARNESS_OPTIONS=j10:c HARNESS_TIMER=1';
    unless ($is_build_branch) {
       my $install = join ("\n", scalar(@releases) ? (
          '   # Install the lowest possible required version for the dependencies',
@@ -143,6 +143,7 @@ sub build_travis_yml {
          'before_install:',
          '   # Prevent "Please tell me who you are" errors for certain DZIL configs',
          '   - git config --global user.name "TravisCI"',
+         '   - git config --global user.email $HOSTNAME":not-for-mail@travis-ci.org"',
 
          ai("
             install:
@@ -323,7 +324,7 @@ sub _mcpan_module_minrelease {
 
 42;
 
-
+__END__
 
 =pod
 
@@ -354,6 +355,3 @@ This is free software, licensed under:
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__

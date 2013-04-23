@@ -1,8 +1,41 @@
 Revision History for Dist-Zilla-TravisCI
 ========================================
 
+v0.97 2013-04-22
+----------------
+
+commit a931cc1786bfc54549cfde943012638016443911
+Author: Brendan Byrd <Perl@ResonatorSoft.org>
+Date:   Mon Apr 22 22:43:47 2013 -0400
+
+    Fix up docs a bit (fixes Issue #3)
+
+commit 6088b1e2a39dfd6baff3b843d6859675538c0c01
+Author: Brendan Byrd <Perl@ResonatorSoft.org>
+Date:   Mon Apr 22 22:11:12 2013 -0400
+
+    Remove weaver.ini (now in PW BBYRD bundle)
+
+commit ea6284f9e00e742c2c2c1cbbbb5185c2aef51537
+Author: Brendan Byrd <Perl@ResonatorSoft.org>
+Date:   Mon Apr 22 15:20:24 2013 -0400
+
+    Fix email missing "Please tell me who you are" errors
+
+commit aad3b6f2834d32ef1ec140ce77abf703bdccb8df
+Author: Torsten Raudssus <torsten@raudss.us>
+Date:   Sun Apr 21 04:45:34 2013 +0200
+
+    I don't think it should be really doing AUTHOR and RELEASE testing for the dependencies
+
 v0.96 2013-03-19
 ----------------
+
+commit b522f310dc2f23727dbeec66b8b732b4e9e7f39b
+Author: Brendan Byrd <Perl@ResonatorSoft.org>
+Date:   Tue Mar 19 14:24:59 2013 -0400
+
+    Release v0.96
 
 commit ef99496fcc3cb3771f0a1283d7f5e24cd286a803
 Author: Brendan Byrd <Perl@ResonatorSoft.org>
