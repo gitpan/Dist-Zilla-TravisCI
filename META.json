@@ -1,10 +1,10 @@
 {
    "abstract" : "Travis CI plugins for your DZIL-based distribution",
    "author" : [
-      "Brendan Byrd <BBYRD@CPAN.org>"
+      "Brendan Byrd <bbyrd@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "artistic_2"
    ],
@@ -30,7 +30,6 @@
       },
       "runtime" : {
          "requires" : {
-            "Acme::Indent" : "0.01",
             "Dist::Zilla" : "1.093220",
             "Dist::Zilla::Plugin::Git::Check" : "1.093250",
             "Dist::Zilla::Role::Git::DirtyFiles" : "1.100740",
@@ -47,33 +46,37 @@
             "Moose::Autobox" : "0.09",
             "MooseX::Has::Sugar" : "0.0100",
             "MooseX::Types::Moose" : "0",
+            "YAML" : "0.67",
             "perl" : "v5.10.1",
             "sanity" : "0.91"
          }
       },
       "test" : {
          "requires" : {
+            "Dist::Zilla" : "0",
             "Test::CheckDeps" : "0.002",
-            "Test::UseAllModules" : "0.10"
+            "Test::DZil" : "4.200002",
+            "Test::More" : "0.94",
+            "Test::Most" : "0.01"
          }
       }
    },
    "provides" : {
       "Dist::Zilla::App::Command::chainsmoke" : {
          "file" : "lib/Dist/Zilla/App/Command/chainsmoke.pm",
-         "version" : "0.97"
+         "version" : "0.98"
       },
       "Dist::Zilla::App::CommandHelper::ChainSmoking" : {
          "file" : "lib/Dist/Zilla/App/CommandHelper/ChainSmoking.pm",
-         "version" : "0.97"
+         "version" : "0.98"
       },
       "Dist::Zilla::Plugin::TravisYML" : {
          "file" : "lib/Dist/Zilla/Plugin/TravisYML.pm",
-         "version" : "0.97"
+         "version" : "0.98"
       },
       "Dist::Zilla::Role::TravisYML" : {
          "file" : "lib/Dist/Zilla/Role/TravisYML.pm",
-         "version" : "0.97"
+         "version" : "0.98"
       }
    },
    "release_status" : "stable",
@@ -89,10 +92,10 @@
       },
       "x_irc" : "irc://irc.perl.org/#distzilla"
    },
-   "version" : "0.97",
+   "version" : "0.98",
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.016003"
+         "version" : "5.014002"
       },
       "plugins" : [
          {
@@ -103,6 +106,11 @@
          {
             "class" : "Dist::Zilla::Plugin::MakeMaker",
             "name" : "@Filter/MakeMaker",
+            "version" : "4.300034"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ModuleShareDirs",
+            "name" : "@Filter/ModuleShareDirs",
             "version" : "4.300034"
          },
          {
@@ -152,12 +160,17 @@
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
-            "name" : "@Filter/ReadmeHtmlInBuild",
+            "name" : "@Filter/ReadmePodInRoot",
             "version" : "0.120120"
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
-            "name" : "@Filter/ReadmePodInBuild",
+            "name" : "@Filter/ReadmeTextInBuild",
+            "version" : "0.120120"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
+            "name" : "@Filter/ReadmeHTMLInBuild",
             "version" : "0.120120"
          },
          {
@@ -173,7 +186,7 @@
          {
             "class" : "Dist::Zilla::Plugin::Test::Compile",
             "name" : "@Filter/Test::Compile",
-            "version" : "2.001"
+            "version" : "2.002"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
@@ -203,7 +216,7 @@
          {
             "class" : "Dist::Zilla::Plugin::Test::CheckDeps",
             "name" : "@Filter/Test::CheckDeps",
-            "version" : "0.005"
+            "version" : "0.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Portability",
@@ -224,11 +237,6 @@
             "class" : "Dist::Zilla::Plugin::Test::DistManifest",
             "name" : "@Filter/Test::DistManifest",
             "version" : "2.000003"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Test::UseAllModules",
-            "name" : "@Filter/Test::UseAllModules",
-            "version" : "0.002"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Version",
@@ -296,6 +304,11 @@
             "version" : "1.103620"
          },
          {
+            "class" : "Dist::Zilla::Plugin::ContributorsFromGit",
+            "name" : "@Filter/ContributorsFromGit",
+            "version" : "0.006"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::CopyFilesFromBuild",
             "name" : "@Filter/CopyFilesFromBuild",
             "version" : "0.103510"
@@ -338,7 +351,7 @@
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
             "name" : "@Filter/GitHub::Update",
-            "version" : "0.32"
+            "version" : "0.34"
          },
          {
             "class" : "Dist::Zilla::Plugin::TestRelease",
@@ -403,6 +416,10 @@
          },
          "version" : "4.300034"
       }
-   }
+   },
+   "x_contributors" : [
+      "Graham Knop <haarg@haarg.org>",
+      "Torsten Raudssus <torsten@raudss.us>"
+   ]
 }
 
