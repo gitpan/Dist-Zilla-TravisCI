@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::TravisYML;
 
-our $VERSION = '0.98_01'; # VERSION
+our $VERSION = '0.98_02'; # VERSION
 # ABSTRACT: creates a .travis.yml file for Travis CI
 
 use sanity;
