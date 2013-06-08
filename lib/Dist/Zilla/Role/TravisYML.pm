@@ -1,6 +1,6 @@
 package Dist::Zilla::Role::TravisYML;
 
-our $VERSION = '1.00'; # VERSION
+our $VERSION = '1.00_01'; # VERSION
 # ABSTRACT: Role for .travis.yml creation
 
 use sanity;

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::TravisYML;
 
-our $VERSION = '1.00'; # VERSION
+our $VERSION = '1.00_01'; # VERSION
 # ABSTRACT: creates a .travis.yml file for Travis CI
 
 use sanity;
@@ -64,7 +64,7 @@ sub after_release {
       Dist::Zilla::File::InMemory->new({
          name    => '.travis.yml',
          content => $file->slurp,
-         mode    => $file->stat->mode & 0755, # kill world-writeability
+         mode    => ($file->stat->mode & 0755), # kill world-writeability
       })
    );
 }
