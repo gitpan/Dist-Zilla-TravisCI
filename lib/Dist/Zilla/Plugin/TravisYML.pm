@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::TravisYML;
 
-our $VERSION = '1.00_01'; # VERSION
+our $VERSION = '1.01'; # VERSION
 # ABSTRACT: creates a .travis.yml file for Travis CI
 
 use sanity;
@@ -61,10 +61,10 @@ sub after_release {
    $self->add_file(
       # Since we put the file in the build directory, we have to use InMemory to
       # prevent the file paths from getting mismatched with what is in zilla->files
-      Dist::Zilla::File::InMemory->new({
+      Dist::Zilla::File::InMemory->new(Dwarn {
          name    => '.travis.yml',
-         content => $file->slurp,
-         mode    => ($file->stat->mode & 0755), # kill world-writeability
+         content => scalar $file->slurp,
+         mode    => $file->stat->mode & 0755, # kill world-writeability
       })
    );
 }
